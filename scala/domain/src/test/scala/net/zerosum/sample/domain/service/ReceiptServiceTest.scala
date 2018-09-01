@@ -36,6 +36,10 @@ class ReceiptServiceTest extends FlatSpec with Matchers with MockFactory
 
     receiptService.getTotal(1) shouldBe Right(790)
   }
+
+  "packagePrivateMethod" should "return `do nothing`" in {
+    receiptService.packagePrivateMethod() shouldBe "do nothing"
+  }
 }
 
 trait ReceiptServiceTestEnvironment {

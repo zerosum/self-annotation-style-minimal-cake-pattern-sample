@@ -21,6 +21,8 @@ trait ReceiptService {
       new RuntimeException(s"there is no receipt. id:[$receiptId]")
     )
   }
+
+  private[service] def packagePrivateMethod(): String = "do nothing"
 }
 
 trait ReceiptServiceComponent {
