@@ -1,4 +1,4 @@
-package model
+package net.zerosum.sample.domain.entity
 
 import java.time.LocalDateTime
 

@@ -1,6 +1,6 @@
-package service
+package net.zerosum.sample.domain.service
 
-import repository._
+import net.zerosum.sample.domain.repository.{ItemRepositoryComponent, ReceiptItemRepositoryComponent, ReceiptRepositoryComponent}
 
 trait ReceiptService {
   self: ReceiptRepositoryComponent
@@ -25,11 +25,4 @@ trait ReceiptService {
 
 trait ReceiptServiceComponent {
   val receiptService: ReceiptService
-}
-
-trait ReceiptServiceComponentRegistry extends ReceiptServiceComponent {
-  val receiptService = new ReceiptService
-    with ReceiptRepositoryComponentRegistry
-    with ReceiptItemRepositoryComponentRegistry
-    with ItemRepositoryComponentRegistry
 }

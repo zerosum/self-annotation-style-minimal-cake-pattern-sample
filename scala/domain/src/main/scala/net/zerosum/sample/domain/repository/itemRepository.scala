@@ -1,6 +1,6 @@
-package repository
+package net.zerosum.sample.domain.repository
 
-import model.Item
+import net.zerosum.sample.domain.entity.Item
 
 trait ItemRepository {
   def findById(id: Long): Option[Item] = Map (
@@ -11,8 +11,4 @@ trait ItemRepository {
 
 trait ItemRepositoryComponent {
   val itemRepository: ItemRepository
-}
-
-trait ItemRepositoryComponentRegistry extends ItemRepositoryComponent {
-  val itemRepository: ItemRepository = new ItemRepository {}
 }

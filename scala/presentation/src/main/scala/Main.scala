@@ -1,4 +1,4 @@
-import service.ReceiptServiceComponentRegistry
+import net.zerosum.sample.component.service.ReceiptServiceComponentRegistry
 
 object Main extends App
   with ReceiptServiceComponentRegistry

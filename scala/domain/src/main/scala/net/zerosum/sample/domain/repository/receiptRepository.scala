@@ -1,8 +1,8 @@
-package repository
+package net.zerosum.sample.domain.repository
 
 import java.time.LocalDateTime
 
-import model.Receipt
+import net.zerosum.sample.domain.entity.Receipt
 
 trait ReceiptRepository {
   def findById(id: Long): Option[Receipt] = Some (
@@ -12,8 +12,4 @@ trait ReceiptRepository {
 
 trait ReceiptRepositoryComponent {
   val receiptRepository: ReceiptRepository
-}
-
-trait ReceiptRepositoryComponentRegistry extends ReceiptRepositoryComponent {
-  val receiptRepository: ReceiptRepository = new ReceiptRepository {}
 }

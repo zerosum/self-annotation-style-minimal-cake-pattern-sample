@@ -1,12 +1,11 @@
-package service
+package net.zerosum.sample.domain.service
 
 import java.time.LocalDateTime
 
-import model.{Item, Receipt, ReceiptItem}
+import net.zerosum.sample.domain.entity.{Item, Receipt, ReceiptItem}
+import net.zerosum.sample.domain.repository._
 import org.scalamock.scalatest.MockFactory
-import org.scalatest.Matchers
-import org.scalatest.FlatSpec
-import repository._
+import org.scalatest.{FlatSpec, Matchers}
 
 class ReceiptServiceTest extends FlatSpec with Matchers with MockFactory
   with ReceiptServiceTestEnvironment {
